@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Marked</title>
+</head>
+<body>
+  <div id="content"></div>
+  <script src="./_js/marked.min.js"></script>
+  <link rel="stylesheet" href="./_css/marked.css" type="text/css" />
+  <link rel="stylesheet" href="./_css/custom.css" type="text/css" />
+  <script>
+    // 获取URL参数中的path值
+	//http://127.0.0.1/_class/marked/marked.html?path=../../URLlink.md
+    function getUrlParameter(name) {
+      name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+      var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+      var results = regex.exec(location.search);
+      return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    }
+
+    // 获取文件地址
+    var filePath = getUrlParameter('path');
+
+    // 使用异步请求获取文件内容
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === XMLHttpRequest.DONE) {
+        if (xhr.status === 200) {
+          var fileContent = xhr.responseText;
+
+          // 使用marked.js渲染文件内容
+          document.getElementById('content').innerHTML = marked.parse(fileContent);
+        } else {
+          console.error('Failed to load file: ' + xhr.status);
+        }
+      }
+    };
+
+    xhr.open('GET', filePath, true);
+    xhr.send();
+  </script>
+</body>
+</html>

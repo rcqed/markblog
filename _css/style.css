@@ -1,0 +1,103 @@
+body {
+	background-color: #f0f0f0;
+	margin: 0;
+	padding: 0;
+}
+
+#webtitle {
+	text-align: center;
+	margin-top: 20px;
+}
+
+#blog-posts {
+	max-width: 800px;
+	margin: 0 auto;
+	background-color: #fff;
+	padding: 20px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+}
+
+#post {
+	margin-bottom: 20px;
+	padding: 10px;
+	background-color: #f9f9f9;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+    border-radius: 6px;
+}
+
+#post:hover {
+    background-color: #007BFF;
+}
+
+#post:hover h2, #post:hover p {
+    color: #ffffff;
+}
+
+
+#title {
+	font-size: 1.5rem;
+	color: #333;
+}
+
+#time {
+	font-size: 0.9rem;
+	color: #777;
+}
+
+a {
+	text-decoration: none;
+	color: #f9f9f9;
+}
+
+#pagination-buttons {
+    text-align: center;
+    margin: 5px 10px 20px 10px;
+}
+
+#pagination-buttons a {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 5px 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+#pagination-buttons a:hover {
+    background-color: #007BFF;
+}
+
+#pagination-num {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+#pagination-num:hover {
+    color: #fff;
+}
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    margin: 10px 10px 5px 10px;
+}
+
+
+#pagination-button {
+    background-color: #f9f9f9;
+    color: #777;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+	border: 1px solid #ccc;
+}
+
+#pagination-button:hover {
+    background-color: #007BFF;
+    color: #fff;
+}
