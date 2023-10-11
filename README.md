@@ -9,14 +9,12 @@ A fully runtime-driven magical blog.
 1. Download the entire project
 
 ```
-bashCopy code
 git clone git@github.com:rcqed/markblog.git
 ```
 
 1. Modify doclist.txt
 
 ```
-cssCopy code
 {Time},{Article Title},{Article URL}
 ```
 
