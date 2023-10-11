@@ -12,13 +12,13 @@ A fully runtime-driven magical blog.
 git clone git@github.com:rcqed/markblog.git
 ```
 
-1. Modify doclist.txt
+2. Modify doclist.txt
 
 ```
 {Time},{Article Title},{Article URL}
 ```
 
-1. Start the web server and enjoy!
+3. Start the web server and enjoy!
 
 ## Demo
 
